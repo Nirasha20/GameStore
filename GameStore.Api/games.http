@@ -1,0 +1,8 @@
+GET http://localhost:5255
+
+HTTP/1.1 200  - OK
+connection: close
+content-type: text/plain; charset=utf-8
+date: Wed, 17 Dec 2025 17:24:37 GMT
+server: Kestrel
+transfer-encoding: chunked
