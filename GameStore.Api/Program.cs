@@ -26,8 +26,12 @@ List<GameDto> games = [
         new DateOnly(2021, 10, 19)
     )
 ];
+//GET /games
+app.MapGet("/games", () => games);
 
-app.MapGet("/", () => "Hello World!");
+//GET/games/1
+app.MapGet("games/{id}", (int id) => games.FirstOrDefault(game => game.Id == id));
+
 
 
 app.Run();
