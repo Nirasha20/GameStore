@@ -2,20 +2,39 @@ GET http://localhost:5255/games
 
 ###
 
-GET http://localhost:5255/games/1
+GET http://localhost:5255/games/8
+
+###
+POST http://localhost:5255/games
+Content-Type: application/json
+
+{
+    "name": "Elden Ring",
+    "genre": "Action RPG",
+    "price": 59.99,
+    "releaseDate": "2022-02-25"
+}
 
 
 
 HTTP/1.1 200  - OK
 connection: close
 content-type: application/json; charset=utf-8
-date: Sat, 20 Dec 2025 17:47:32 GMT
+date: Sat, 20 Dec 2025 18:13:28 GMT
 server: Kestrel
 transfer-encoding: chunked
 
 HTTP/1.1 200  - OK
 connection: close
 content-type: application/json; charset=utf-8
-date: Sat, 20 Dec 2025 17:47:32 GMT
+date: Sat, 20 Dec 2025 18:13:28 GMT
 server: Kestrel
+transfer-encoding: chunked
+
+HTTP/1.1 201  - Created
+connection: close
+content-type: application/json; charset=utf-8
+date: Sat, 20 Dec 2025 18:13:28 GMT
+server: Kestrel
+location: http://localhost:5255/games/9
 transfer-encoding: chunked
