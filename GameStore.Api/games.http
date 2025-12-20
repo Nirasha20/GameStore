@@ -17,7 +17,6 @@ Content-Type: application/json
 
 ###
 PUT http://localhost:5255/games/1
-
 Content-Type: application/json
 
 {
@@ -27,33 +26,39 @@ Content-Type: application/json
     "releaseDate": "2017-03-03"
 }
 
+###
+DELETE http://localhost:5255/games/2
+
 
 
 HTTP/1.1 200  - OK
 connection: close
 content-type: application/json; charset=utf-8
-date: Sat, 20 Dec 2025 18:26:10 GMT
+date: Sat, 20 Dec 2025 18:45:22 GMT
 server: Kestrel
 transfer-encoding: chunked
 
 HTTP/1.1 200  - OK
 connection: close
 content-type: application/json; charset=utf-8
-date: Sat, 20 Dec 2025 18:26:10 GMT
+date: Sat, 20 Dec 2025 18:45:22 GMT
 server: Kestrel
 transfer-encoding: chunked
 
 HTTP/1.1 201  - Created
 connection: close
 content-type: application/json; charset=utf-8
-date: Sat, 20 Dec 2025 18:26:11 GMT
+date: Sat, 20 Dec 2025 18:45:22 GMT
 server: Kestrel
 location: http://localhost:5255/games/6
 transfer-encoding: chunked
 
-HTTP/1.1 415  - Unsupported Media Type
+HTTP/1.1 204  - No Content
 connection: close
-content-type: text/plain; charset=utf-8
-date: Sat, 20 Dec 2025 18:26:11 GMT
+date: Sat, 20 Dec 2025 18:45:22 GMT
 server: Kestrel
-transfer-encoding: chunked
+
+HTTP/1.1 204  - No Content
+connection: close
+date: Sat, 20 Dec 2025 18:45:23 GMT
+server: Kestrel
