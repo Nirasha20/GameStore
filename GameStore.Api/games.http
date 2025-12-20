@@ -2,7 +2,7 @@ GET http://localhost:5255/games
 
 ###
 
-GET http://localhost:5255/games/8
+GET http://localhost:5255/games/1
 
 ###
 POST http://localhost:5255/games
@@ -15,26 +15,45 @@ Content-Type: application/json
     "releaseDate": "2022-02-25"
 }
 
+###
+PUT http://localhost:5255/games/1
+
+Content-Type: application/json
+
+{
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "genre": "Action-adventure",
+    "price": 49.99,
+    "releaseDate": "2017-03-03"
+}
+
 
 
 HTTP/1.1 200  - OK
 connection: close
 content-type: application/json; charset=utf-8
-date: Sat, 20 Dec 2025 18:13:28 GMT
+date: Sat, 20 Dec 2025 18:26:10 GMT
 server: Kestrel
 transfer-encoding: chunked
 
 HTTP/1.1 200  - OK
 connection: close
 content-type: application/json; charset=utf-8
-date: Sat, 20 Dec 2025 18:13:28 GMT
+date: Sat, 20 Dec 2025 18:26:10 GMT
 server: Kestrel
 transfer-encoding: chunked
 
 HTTP/1.1 201  - Created
 connection: close
 content-type: application/json; charset=utf-8
-date: Sat, 20 Dec 2025 18:13:28 GMT
+date: Sat, 20 Dec 2025 18:26:11 GMT
 server: Kestrel
-location: http://localhost:5255/games/9
+location: http://localhost:5255/games/6
+transfer-encoding: chunked
+
+HTTP/1.1 415  - Unsupported Media Type
+connection: close
+content-type: text/plain; charset=utf-8
+date: Sat, 20 Dec 2025 18:26:11 GMT
+server: Kestrel
 transfer-encoding: chunked
