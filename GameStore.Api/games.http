@@ -2,12 +2,6 @@ GET http://localhost:5255/games
 ###
 
 GET http://localhost:5255/games/4
-
-HTTP/1.1 404  - Not Found
-content-length: 0
-connection: close
-date: Sun, 21 Dec 2025 17:14:26 GMT
-server: Kestrel
 ###
 POST http://localhost:5255/games
 Content-Type: application/json
@@ -18,6 +12,14 @@ Content-Type: application/json
     "price": 59.99,
     "releaseDate": "2022-02-25"
 }
+
+HTTP/1.1 201  - Created
+connection: close
+content-type: application/json; charset=utf-8
+date: Sun, 21 Dec 2025 18:29:25 GMT
+server: Kestrel
+location: http://localhost:5255/games/4
+transfer-encoding: chunked
 ###
 PUT http://localhost:5255/games/5
 Content-Type: application/json
@@ -28,11 +30,5 @@ Content-Type: application/json
     "price": 49.99,
     "releaseDate": "2017-03-03"
 }
-
-HTTP/1.1 404  - Not Found
-content-length: 0
-connection: close
-date: Sun, 21 Dec 2025 17:19:28 GMT
-server: Kestrel
 ###
 DELETE http://localhost:5255/games/2
