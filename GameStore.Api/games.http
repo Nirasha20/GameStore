@@ -1,8 +1,38 @@
-GET http://localhost:5255
+GET http://localhost:5255/games
+###
 
-HTTP/1.1 200  - OK
+GET http://localhost:5255/games/4
+
+HTTP/1.1 404  - Not Found
+content-length: 0
 connection: close
-content-type: text/plain; charset=utf-8
-date: Wed, 17 Dec 2025 17:24:37 GMT
+date: Sun, 21 Dec 2025 17:14:26 GMT
 server: Kestrel
-transfer-encoding: chunked
+###
+POST http://localhost:5255/games
+Content-Type: application/json
+
+{
+    "name": "Elden Ring",
+    "genre": "Action RPG",
+    "price": 59.99,
+    "releaseDate": "2022-02-25"
+}
+###
+PUT http://localhost:5255/games/5
+Content-Type: application/json
+
+{
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "genre": "Action-adventure",
+    "price": 49.99,
+    "releaseDate": "2017-03-03"
+}
+
+HTTP/1.1 404  - Not Found
+content-length: 0
+connection: close
+date: Sun, 21 Dec 2025 17:19:28 GMT
+server: Kestrel
+###
+DELETE http://localhost:5255/games/2
