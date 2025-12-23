@@ -16,7 +16,7 @@ Content-Type: application/json
 HTTP/1.1 201  - Created
 connection: close
 content-type: application/json; charset=utf-8
-date: Sun, 21 Dec 2025 18:29:25 GMT
+date: Tue, 23 Dec 2025 19:01:06 GMT
 server: Kestrel
 location: http://localhost:5255/games/4
 transfer-encoding: chunked

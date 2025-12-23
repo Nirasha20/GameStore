@@ -48,10 +48,7 @@ public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app)
         //POST
         group.MapPost("/", (CreateGameDto newGame) =>
         {
-            if (string.IsNullOrWhiteSpace(newGame.Name))
-            {
-                return Results.BadRequest("Name is required.");
-            }
+            
             GameDto game = new(
                 games.Count + 1,
                 newGame.Name,
